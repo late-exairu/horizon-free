@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Sidebar() {
   return (
-    <div className="-my-5 -ml-5 w-[290px] bg-white p-[30px]">
-      <div className="-m-[30px] mb-0 flex h-[148px] items-center justify-center border-b border-slate-100">
+    <div className="-my-5 -ml-5 w-[290px] bg-white">
+      <div className=" flex h-[148px] items-center justify-center border-b border-slate-100">
         <Link href="/">
           <Image src="logo.svg" width="180" height="26" alt="logo" />
         </Link>
