@@ -11,6 +11,7 @@ export default function Sidebar() {
       </div>
 
       <div className="flex-column flex gap-1 font-medium text-slate-500 ">
+        <Link href="/dashboard">Dashboard</Link>
         <Link href="/marketplace">Marketplace</Link>
         <Link href="/profile">Profile</Link>
         <Link href="/tables">Tables</Link>
