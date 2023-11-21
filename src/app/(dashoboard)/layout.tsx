@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import DashboardHead from "@/components/dashboard/Head";
 import { DM_Sans, Poppins } from "next/font/google";
 import "./../globals.css";
 import Sidebar from "@/components/Sidebar";
@@ -20,7 +21,11 @@ export default function DashboardLayout({
     <div className="{dm_sans.className} flex min-h-screen items-stretch gap-5 p-5">
       <Sidebar />
 
-      {children}
+      <main className="m-1 flex-1 sm:m-1">
+        <DashboardHead />
+
+        {children}
+      </main>
     </div>
   );
 }

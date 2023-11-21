@@ -1,10 +1,12 @@
-import { createClient } from 'next-sanity'
+import { createClient, type ClientConfig } from "@sanity/client";
 
-import { apiVersion, dataset, projectId, useCdn } from '../env'
+const config: ClientConfig = {
+  apiVersion: "2023-11-21",
+  dataset: "production",
+  projectId: "pg2tlmhw",
+  useCdn: false,
+};
 
-export const client = createClient({
-  apiVersion,
-  dataset,
-  projectId,
-  useCdn,
-})
+const client = createClient(config);
+
+export default client;
