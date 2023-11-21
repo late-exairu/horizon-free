@@ -10,11 +10,31 @@ export default function Sidebar() {
         </Link>
       </div>
 
-      <div className="flex-column flex gap-1 font-medium text-slate-500 ">
-        <Link href="/dashboard">Dashboard</Link>
-        <Link href="/marketplace">Marketplace</Link>
-        <Link href="/profile">Profile</Link>
-        <Link href="/tables">Tables</Link>
+      <div className="flex flex-col gap-1 font-medium text-slate-500 ">
+        <Link
+          className="flex min-h-[36px] items-center px-[30px]"
+          href="/dashboard"
+        >
+          Dashboard
+        </Link>
+        <Link
+          className="flex min-h-[36px] items-center px-[30px]"
+          href="/marketplace"
+        >
+          Marketplace
+        </Link>
+        <Link
+          className="flex min-h-[36px] items-center px-[30px]"
+          href="/profile"
+        >
+          Profile
+        </Link>
+        <Link
+          className="flex min-h-[36px] items-center px-[30px]"
+          href="/tables"
+        >
+          Tables
+        </Link>
       </div>
     </div>
   );
