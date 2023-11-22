@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import DashboardHead from "@/components/dashboard/Head";
 import { DM_Sans, Poppins } from "next/font/google";
 import "./../globals.css";
+import Head from "@/components/dashboard/Head";
 import Sidebar from "@/components/Sidebar";
 
 const dm_sans = DM_Sans({ subsets: ["latin"] });
@@ -21,8 +21,8 @@ export default function DashboardLayout({
     <div className="{dm_sans.className} flex min-h-screen items-stretch gap-5 p-5">
       <Sidebar />
 
-      <main className="m-1 flex-1 sm:m-1">
-        <DashboardHead />
+      <main className="mt-8 flex-1">
+        <Head />
 
         {children}
       </main>

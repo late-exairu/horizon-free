@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Sidebar() {
   return (
     <div className="-my-5 -ml-5 w-[290px] bg-white">
-      <div className=" flex h-[148px] items-center justify-center border-b border-slate-100">
+      <div className=" flex h-[130px] items-center justify-center border-b border-slate-100">
         <Link href="/">
           <Image src="logo.svg" width="180" height="26" alt="logo" />
         </Link>

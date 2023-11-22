@@ -9,7 +9,7 @@ export default async function Page() {
 
   return (
     <div className="flex flex-row justify-between">
-      <PageTitle title="asdss" fullTitle="asd" />
+      <PageTitle title="asdss" fullTitle="Main Dashboard" />
       <Userbar />
     </div>
   );
