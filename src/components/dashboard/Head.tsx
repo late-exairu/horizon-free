@@ -5,7 +5,7 @@ import { getPage } from "@/sanity/lib/query";
 export default async function Page() {
   const page = await getPage();
 
-  console.log(page);
+  // console.log(page);
 
   return (
     <div className="flex flex-row justify-between">

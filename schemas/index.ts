@@ -1,4 +1,8 @@
-import profile from "./profile";
-import page from "./page";
+import navItem from "./objects/navItem";
+import link from "./objects/link";
 
-export const schemaTypes = [profile, page];
+import page from "./page";
+import profile from "./profile";
+import navigation from "./navigation";
+
+export const schemaTypes = [profile, page, navigation, link, navItem];

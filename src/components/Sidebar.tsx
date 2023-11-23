@@ -1,7 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getSideNav } from "@/sanity/lib/query";
+import ActiveLink from "./ActiveLink";
 
-export default function Sidebar() {
+export default async function Sidebar() {
+  const sideNav = await getSideNav();
+
   return (
     <div className="-my-5 -ml-5 w-[290px] bg-white">
       <div className=" flex h-[130px] items-center justify-center border-b border-slate-100">
@@ -10,32 +14,13 @@ export default function Sidebar() {
         </Link>
       </div>
 
-      <div className="flex flex-col gap-1 font-medium text-slate-500 ">
-        <Link
-          className="flex min-h-[36px] items-center px-[30px]"
-          href="/dashboard"
-        >
-          Dashboard
-        </Link>
-        <Link
-          className="flex min-h-[36px] items-center px-[30px]"
-          href="/marketplace"
-        >
-          Marketplace
-        </Link>
-        <Link
-          className="flex min-h-[36px] items-center px-[30px]"
-          href="/profile"
-        >
-          Profile
-        </Link>
-        <Link
-          className="flex min-h-[36px] items-center px-[30px]"
-          href="/tables"
-        >
-          Tables
-        </Link>
-      </div>
+      <ul className="mt-10 flex flex-col gap-5 font-medium text-slate-500">
+        {sideNav[0].items.map((item: any) => (
+          <li key={item._key}>
+            <ActiveLink href={item.url}>{item.title}</ActiveLink>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
